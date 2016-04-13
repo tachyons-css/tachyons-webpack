@@ -6,7 +6,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/app.js',
-    tachyons: 'tachyons/css/tachyons.css'
+    tachyons: 'tachyons/css/tachyons.css',
+    index: './css/index.css'
   },
   plugins: [
     new ExtractTextPlugin('[name].css', {allChunks: true}),

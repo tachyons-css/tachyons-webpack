@@ -1,6 +1,7 @@
 # Tachyons webpack boilerplate
 
-This is a basic webpack boilerplate to be used with Tachyons. You can write your javascript in `src/app.js` and add html and css to `index.html`.
+This is a basic webpack boilerplate to be used with Tachyons. You can write your javascript in `src/app.js`m add html to `index.html` and
+add custom css to `css/index.css`.
 
 ## Installation
 
@@ -15,5 +16,5 @@ rebuild. Refreshing your browser will show the changes.
 
 ## Build
 
-Running `npm run build` will create a `dist` folder with the `index.html`, `main.js` and `tachyons.css`
+Running `npm run build` will create a `dist` folder with the `index.html`, `main.js`, `index.css` and `tachyons.css`
 files for you to distribute or deploy
