@@ -1,4 +1,4 @@
-# Tachyons webpack boilerplate
+# Tachyons webpack boilerplate with browser-sync
 
 This is a basic webpack boilerplate to be used with Tachyons. You can write your javascript in `src/app.js`m add html to `index.html` and
 add custom css to `css/index.css`.
@@ -12,7 +12,7 @@ add custom css to `css/index.css`.
 ## Development mode
 
 Running `npm run dev` will run the __webpack-dev-server__ on port 3000. You can then develop and webpack will watch for file changes and
-rebuild. Refreshing your browser will show the changes.
+rebuild. BrowserSync will refresh the page.
 
 ## Build
 
