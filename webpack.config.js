@@ -6,7 +6,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/app.js',
-    tachyons: 'tachyons/css/tachyons.css',
+    tachyons: './css/tachyons.css',
     index: './css/index.css'
   },
   plugins: [
@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,6 +61,13 @@ module.exports = {
     path: __dirname + '/dist/',
     publicPath: '/',
     filename: '[name].js'
+  },
+  postcss: function(webpack) {
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      })
+    ];
   },
   devServer: {
     port: 3000,
