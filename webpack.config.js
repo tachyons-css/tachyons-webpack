@@ -18,11 +18,11 @@ module.exports = {
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: [ 'css-loader' ] })
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -55,7 +55,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
   output: {
     path: __dirname + '/dist/',
